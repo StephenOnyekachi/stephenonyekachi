@@ -30,8 +30,8 @@ This project is hosted on GitHub and may be deployed via:
 
 Feel free to reach out or connect:
 - GitHub: [StephenOnyekachi](https://github.com/StephenOnyekachi)
-- Email: *your-email@example.com* (replace with your actual email)
-- Website: [Africeuro](https://www.africeuro.com/) (if relevant)
+- Email: *stephenonyekachi18@gmail.com*
+- Website: [stephenonyekachi](https://www.pythonanywhere.com/user/StephenOnyekachi/account/)
 
 ## 📄 License
 
