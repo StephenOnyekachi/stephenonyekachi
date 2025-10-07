@@ -1,0 +1,330 @@
+
+@media (max-width: 999px) {
+    .my-nav {
+        width: 90%;
+        /* display: none; */
+    }
+    .top-magin{
+        padding-top: 120px;
+    }
+    .intro-view {
+        padding: 50px 10px;
+    }
+    .intro-view {
+        position: relative;
+        width: 100%;
+        top: 0px;
+        height: auto;
+    }
+    .intro-view-con {
+        padding: 10px;
+        padding-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .intro-view-cons {
+        width: 100%;
+        padding: 5px;
+        align-self: center;
+
+    }
+    .intro-view-cons h1 {
+        font-size: 50px;
+        font-weight: 700;
+    }
+    .intro-view-cons h3 {
+        font-size: 40px;
+        font-weight: 300;
+    }
+    .intro-view-cons p {
+        font-size: 20px;
+        font-weight: 20;
+    }
+    #intro{
+        background-color: rgba(0, 0, 0, 0.498);
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .intro-social-title {
+        text-align: center;
+    }
+    .intro-social-title h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 10px 0px;
+        /* margin-right: 10px; */
+    }
+    .intro-social {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+    }
+    .intro-social-box {
+        max-width: 100px;
+        background-color: var(--icon);
+        transition: all 0.5s ease;
+    }
+    .intro-social-box a p {
+        color: var(--dark);
+        font-size: medium;
+        padding: 0px;
+    }
+    .service-card-heard i {
+        font-size: 30px;
+    }
+    .service-card-heard h4 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-left: 10px;
+    }
+    .service-card-body p{
+        color: var(--dark);
+        font-size: 20px;
+        font-weight: normal;
+    }
+    .show-section {
+        width: 100%;
+        padding: 10px;
+    }
+    .show-cont {
+        margin: 0px;
+        width: 100%;
+    }
+    .show-con {
+        margin: 0px;
+        padding-top: 5px;
+    }
+    .show-card {
+        position: relative;
+        margin: 10px;
+        /* border: 3px solid var(--dark); */
+        max-width: 300px;
+    }
+    .show-card img {
+        width: 100%;
+        object-fit: contain;
+        object-position: center;
+        height: 200px;
+        border-radius: 50%;
+        margin-bottom: 5px;
+        margin: 0px;
+        margin-top: 0px;
+    }
+    .show-cover h3 {
+        color: var(--icon);
+        font-size: 2.5rem;
+        text-transform: capitalize;
+        font-weight: 700;
+        padding: 5px;
+    }
+    .show-cover p {
+        color: var(--lighter);
+        padding: 5px;
+        font-size: 2.5rem;
+    }
+    .partners {
+        max-width: 300px;
+    }
+    .partners h3 {
+        font-size: 2.5rem;
+    }
+    .partners p {
+        font-size: 2rem;
+    }
+    .footer-cons p {
+        font-size: 2rem;
+    }
+    .footer-cons h3 {
+        font-size: 2.5rem;
+    }
+    .footer-image img {
+        width: 200px;
+        text-align: center;
+    }
+    .about-section {
+        padding: 10px;
+        padding-top: 50px;
+    }
+    .about-con {
+        margin: 0px;
+        padding-top: 20px;
+    }
+    .bio {
+        max-width: 100%;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        padding: 10px;
+        background-color: var(--dark);
+        margin: 5px;
+        transition: all 0.5s ease;
+    }
+    .bio h3 {
+        color: var(--light);
+        font-size: 2.5rem;
+    }
+    .bio p {
+        font-size: 2.2rem;
+    }
+    .bio-social a i {
+        font-size: 2rem;
+    }
+    .bio-contact {
+        max-width: 100%;
+    }
+    .bio-contact h3 {
+        font-size: 2.5rem;
+    }
+    .bio-contact p {
+        font-size: 2.3rem;
+    }
+    .bio-message input {
+        width: 100%;
+        padding: 10px;
+        font-size: 2rem;
+    }
+    .bio-message textarea {
+        height: 150px;
+        width: 100%;
+        padding: 10px;
+        font-size: 2rem;
+    }
+    .bio-message button {
+        width: 100%;
+        padding: 10px;
+        font-size: 2rem;
+    }
+    .skil-title h3{
+        font-size: 2.5rem;
+    }
+    .skill-box-icon i {
+        font-size: 2.5rem;
+    }
+    .skill-box-con h4 {
+        font-size: 2.5rem;
+    }
+    .skill-box-con p {
+        font-size: 2rem;
+        font-weight: normal;
+    }
+    .blog-title h3{
+        font-size: 2.5rem;
+    }
+    .blog-cont {
+        width: 100%;
+    }
+    .blog-box {
+        width: 100%;
+        display: flex;
+    }
+    .blog-con {
+        margin: 5px;
+        padding-top: 0px;
+    }
+    .blog {
+        display: block;
+        width: 100%;
+        padding: 5px;
+    }
+    .blog-box-icon {
+        width: 200px;
+    }
+    .blog-box-icon img {
+        width: 100%;
+        height: 200px;
+        margin: 5px;
+    }
+    .skill-box-con h4 {
+        font-size: 2.5rem;
+    }
+    .skill-box-con p {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 480px) {
+    .mymenu {
+        display: block;
+    }
+    .my-nav {
+        width: 100%;
+        display: flex;
+    }
+    .my-nav-box {
+        position: relative;
+        display: flex;
+        align-self: center;
+        left:  10px;
+        padding: 5px;
+    }
+    .my-nav a {
+        font-size: 2rem;
+        text-decoration: none;
+    }
+    .my-nav a:hover {
+        text-decoration: none;
+    }
+    .intro-view {
+        padding: 100px 10px;
+    }
+    .intro-social {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+    }
+    .intro-social-box {
+        max-width: 100px;
+        background-color: var(--icon);
+        transition: all 0.5s ease;
+    }
+    .intro-social-box a p {
+        color: var(--dark);
+        font-size: medium;
+        padding: 0px;
+    }
+    .service-card-heard i {
+        font-size: 30px;
+    }
+    .service-card-heard h4 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-left: 10px;
+    }
+    .service-card-body p{
+        color: var(--dark);
+        font-size: 20px;
+        font-weight: normal;
+    }
+    .show-card {
+        position: relative;
+        margin: 10px;
+        /* border: 3px solid var(--dark); */
+        max-width: 100%;
+    }
+    .partners {
+        max-width: 100%;
+    }
+    .partners h3 {
+        font-size: 2.5rem;
+    }
+    .partners p {
+        font-size: 2rem;
+    }
+    .footer-cons p {
+        font-size: 2rem;
+    }
+    .footer-cons h3 {
+        font-size: 2.5rem;
+    }
+    .footer-image img {
+        width: 200px;
+        text-align: center;
+    }
+}
