@@ -1,0 +1,67 @@
+
+
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+
+<!-- PRELOADER -->
+<div id="preloader">
+    <div class="loader"></div>
+</div>
+
+<div class="fixed mt-6 z-100 flex w-full">
+    <div class="flex m-5 mt-0 items-center justify-between bg-white w-full border-1 border-white rounded">
+        <div class="flex items-center">
+            <img 
+                src="{% static 'files/logo.png' %}" 
+                alt="image"
+                class="w-[100px]"
+            >
+        </div>
+        <div class="flex items-center gap-2 p-2">
+            <a href="{% url 'index' %}"
+                {% if request.path == '/' %}
+                    class="py-2 px-2 capitalize text-white bg-black rounded"
+                {% else %}
+                    class="py-2 px-2 capitalize text-black bg-white rounded
+                    backdrop-blur-md hover:bg-gray-400 hover:text-white transition duration-300"
+                {% endif %}
+            >
+                home
+            </a>
+
+            <a href="{% url 'samples' %}"
+                {% if request.path == '/samples/' %}
+                    class="py-2 px-2 capitalize text-white bg-black rounded"
+                {% else %}
+                    class="py-2 px-2 capitalize text-black bg-white rounded
+                    backdrop-blur-md hover:bg-gray-400 hover:text-white transition duration-300"
+                {% endif %} 
+            >
+                samples
+            </a>
+
+            <a href="{% url 'store' %}"
+                {% if request.path == '/store/' %}
+                    class="py-2 px-2 capitalize text-white bg-black rounded"
+                {% else %}
+                    class="py-2 px-2 capitalize text-black bg-white rounded
+                    backdrop-blur-md hover:bg-gray-400 hover:text-white transition duration-300"
+                {% endif %} 
+            >
+                store
+            </a>
+
+            <a href="{% url 'login' %}"
+                class="py-2 px-2 capitalize text-white bg-white rounded
+                backdrop-blur-md hover:bg-red-400 hover:text-white transition duration-300" 
+            >
+                <i class="fa fa-power-off text-red-300"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

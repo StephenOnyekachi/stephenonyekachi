@@ -1,0 +1,104 @@
+
+
+{% extends 'extends/header.html' %}
+{% load static %}
+{% load humanize %}
+
+
+{% block content %}
+
+{% include 'extends/anav.html' %}
+
+<div class="bg-black p-10 pt-30">
+
+    <div>
+        <div class="flex mt-0 px-2 items-center justify-between bg-white w-full border border-white rounded ">
+            <div class="flex items-center gap-2 p-2">
+                <p>Total Samples</p>
+                <h3 class="font-black">{{ items.count }}</h3>
+            </div>
+            <div class="flex items-center gap-2 p-2">
+                <a href="{% url 'addstore' %}"
+                    class="py-2 px-2 capitalize text-black bg-white rounded
+                    backdrop-blur-md hover:bg-gray-400 hover:text-white transition duration-300"
+                >
+                    <i class="fa fa-cart-plus"> Add to store</i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div>
+
+        <div class="p-2">
+            <h1 class="text-3xl md:text-4xl font-black text-white text-left">
+                All Items.
+            </h1>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-5 px-2 py-5 items-stretch">
+
+            {% if items %}
+
+            {% for sample in items %}
+
+            <div class="w-full items-stretch rounded bg-white/10 border border-white/2">
+                <div class="flex items-center p-5">
+                    <i class="fa fa-code 
+                        text-white rounded-full 
+                        bg-white/10 border border-white/2 p-5
+                    "></i>
+                    <h3 class="text-1xl font-black text-white p-2 capitalize">
+                        {{ sample.name }}.
+                    </h3>
+                </div>
+                <div class="flex flex-wrap">
+                    <div class="w-full md:w-[250px]">
+                        <img 
+                            src="{{ sample.image.url }}" 
+                            alt="image"
+                            class="w-full object-contain"
+                        >
+                    </div>
+                    <div class="text-white rounded shadow p-5">
+                        <p class="py-2">
+                            {{ sample.description | linebreaksbr }}
+                        </p>
+                        <p class="py-2">
+                            {{ sample.number }}
+                        </p>
+
+                        <div class="flex gap-2 py-5">
+                            <a href="{% url 'editstore' sample.id %}"
+                                class="w-full p-2 bg-white/10 border rounded capitalize
+                                border-white/20 text-white text-xl backdrop-blur-md text-center
+                                hover:bg-gray-400 transition duration-300"
+                            >
+                                edit
+                            </a>
+                            <a href="{% url 'deletestore' sample.id %}"
+                                class="w-full p-2 bg-red-300/50 border rounded capitalize
+                                border-white/20 text-white text-xl backdrop-blur-md text-center
+                                hover:bg-red-400 transition duration-300"
+                            >
+                                delete
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</div>
+
+{% include 'extends/afooter.html' %}
+
+{% endblock %}
+

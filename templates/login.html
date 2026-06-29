@@ -1,0 +1,121 @@
+
+
+{% extends 'extends/header.html' %}
+{% load static %}
+{% load humanize %}
+
+
+{% block content %}
+
+{% include 'extends/gnav.html' %}
+
+<div class="relative min-h-screen pt-20">
+
+    <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover"
+    >
+        <source src="{% static 'files/v2.mp4' %}">
+    </video>
+
+    <div class="absolute inset-0 bg-black/70"></div>
+
+    <div class="relative z-10 flex items-center justify-center min-h-screen px-6">
+        <div>
+
+            <div class="p-2">
+                <h1 class="
+                    text-4xl md:text-6xl font-black text-center
+                    bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent
+                ">
+                    Stephen Onyekachi
+                </h1>
+            </div>
+
+            <div class="p-5">
+                <p class="text-gray-300 mt-4 max-w-2xl mx-auto">
+                    Am Stephen Onyekachi, a passionate Software Engineer from Nigeria. 
+                    I have since dedicated myself to building impactful solutions through technology.
+                </p>
+                <p class="text-gray-300 mt-4 max-w-2xl mx-auto">
+                    My primary programming language is Python, which I’ve made my top priority 
+                    due to its versatility and power across various domains.
+                </p>
+                <p class="text-gray-300 mt-4 max-w-2xl mx-auto">
+                    Full Stack Django Developer & Problem Solver
+                </p>
+            </div>
+
+            <div class="p-5">
+
+                <div>
+                    <form action=""
+                        method="post"
+                        enctype="multipart/form-data"
+                    >
+
+                        {% csrf_token %}
+
+                        <div>
+                            <input type="text" name="username"
+                                placeholder="Your Username:"
+                                class="w-full outline-none rounded border border-white text-white p-2"
+                            >
+                        </div>
+                        <br>
+                        <div>
+                            <input type="password" name="password"
+                                placeholder="Your Password:"
+                                class="w-full outline-none rounded border border-white text-white p-2"
+                            >
+                        </div>
+                        <br>
+                        <div>
+                            <button
+                                class="w-full p-2 bg-white/10 border rounded border-white/20 text-white text-xl backdrop-blur-md"
+                            >
+                                Login Now
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="flex flex-wrap gap-5 mt-6 items-center justify-center">
+
+                <div class="text-gray-300 text-center slidetop">
+                    <p>
+                        support@stephenonyekachi.com
+                    </p>
+                    <p>
+                        +234 903 1360 947
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="flex flex-wrap gap-5 mt-6 items-center justify-center">
+
+                <div class="text-gray-300 py-5 text-center">
+                    <p>
+                        &copy;
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script> 
+                        Stephen Onyekachi. All rights reserved
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,114 @@
+
+
+{% extends 'extends/header.html' %}
+{% load static %}
+{% load humanize %}
+
+
+{% block content %}
+
+{% include 'extends/anav.html' %}
+
+<div class="bg-black p-10 pt-30">
+
+    <div>
+
+        <div class="p-2">
+            <h1 class="text-3xl md:text-4xl font-black text-white text-left">
+                Edit Storee.
+            </h1>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-5 px-2 py-5 items-stretch">
+
+            <div class="w-full items-stretch rounded bg-white/10 border border-white/2">
+                <div class="flex items-center p-5">
+                    <i class="fa fa-code 
+                        text-white rounded-full 
+                        bg-white/10 border border-white/2 p-5
+                    "></i>
+                    <h3 class="text-1xl font-black text-white p-2 capitalize">
+                        {{ item.name }}.
+                    </h3>
+                </div>
+                <div class="flex flex-wrap">
+                    <div class="w-full md:w-[250px]">
+                        <img 
+                            src="{{ item.image.url }}" 
+                            alt="image"
+                            class="w-full object-contain bg-white/10 h-40"
+                        >
+                    </div>
+                    <div class="text-white rounded shadow p-5">
+                        <p class="py-2">
+                            {{ item.description | linebreaksbr }}
+                        </p>
+                        <p class="py-2">
+                            {{ item.number }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full items-stretch rounded bg-white/10 border border-white/2">
+                <div class="flex items-center p-5">
+                    <i class="fa fa-edit
+                        text-white rounded-full 
+                        bg-white/10 border border-white/2 p-5
+                    "></i>
+                    <h3 class="text-2xl font-black text-white p-2 capitalize">
+                        edit here.
+                    </h3>
+                </div>
+                <div class="">
+                    <form action=""
+                        method="post"
+                        enctype="multipart/form-data"
+                    >
+
+                        {% csrf_token %}
+
+                        <div class="py-2 px-5">
+                            <input type="file" name="image"
+                                class="w-full outline-none rounded border border-white text-white p-2"
+                            >
+                        </div>
+                        <div class="py-2 px-5">
+                            <input type="text" name="title"
+                                value="{{ item.name }}"
+                                class="w-full outline-none rounded border border-white text-white p-2"
+                            >
+                        </div>
+                        <div class="py-2 px-5">
+                            <input type="text" name="link"
+                                value="{{ item.number }}"
+                                class="w-full outline-none rounded border border-white text-white p-2"
+                            >
+                        </div>
+                        <div class="py-2 px-5">
+                            <textarea name="description" id=""
+                                class="w-full outline-none rounded border border-white text-white p-2 h-30"
+                            >{{ item.description }}</textarea>
+                        </div>
+                        <div class="py-2 px-5 pb-5">
+                            <button
+                                class="w-full p-2 bg-white/10 border rounded 
+                                border-white/20 text-white text-xl backdrop-blur-md
+                                hover:bg-green-400 transition duration-300"
+                            >
+                                Update Now
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% include 'extends/afooter.html' %}
+
+{% endblock %}

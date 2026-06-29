@@ -1,0 +1,375 @@
+
+
+{% extends 'extends/header.html' %}
+{% load static %}
+{% load humanize %}
+
+
+{% block content %}
+
+{% include 'extends/gnav.html' %}
+
+<div class="relative min-h-screen pt-5">
+
+    <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover"
+    >
+        <source src="{% static 'files/v1.mp4' %}">
+    </video>
+
+    <div class="absolute inset-0 bg-black/70"></div>
+
+    <div class="relative z-10 flex items-center justify-center min-h-screen px-6">
+        <div>
+            <div class="p-2">
+                <h1 class="
+                    text-4xl md:text-8xl font-black text-center mt-20 sm:mt-[50px]
+                    bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent
+                ">
+                    Stephen Onyekachi
+                </h1>
+            </div>
+
+            <div class="p-5">
+                <p class="text-gray-300 mt-4 max-w-2xl mx-auto">
+                    Am Stephen Onyekachi, a passionate Software Engineer from Nigeria. 
+                    I have since dedicated myself to building impactful solutions through technology.
+                </p>
+                <p class="text-gray-300 mt-4 max-w-2xl mx-auto">
+                    My primary programming language is Python, which I’ve made my top priority 
+                    due to its versatility and power across various domains.
+                </p>
+                <p class="text-gray-300 mt-4 max-w-2xl mx-auto">
+                    Full Stack Django Developer & Problem Solver
+                </p>
+            </div>
+
+            <div class="flex flex-wrap gap-5 mt-6 items-center justify-center">
+
+                <a href=""
+                    class="w-12 h-12 flex items-center justify-center rounded-full 
+                    bg-white/10 border border-white/20 text-white text-xl
+                    backdrop-blur-md shadow-lg
+                    hover:bg-blue-600 hover:scale-110
+                    transition duration-300">
+
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href=""
+                    class="w-12 h-12 flex items-center justify-center rounded-full 
+                    bg-white/10 border border-white/20 text-white text-xl
+                    backdrop-blur-md shadow-lg
+                    hover:bg-pink-600 hover:scale-110
+                    transition duration-300">
+
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <a href=""
+                    class="w-12 h-12 flex items-center justify-center rounded-full 
+                    bg-white/10 border border-white/20 text-white text-xl
+                    backdrop-black-md shadow-lg
+                    hover:bg-gray-600 hover:scale-110
+                    transition duration-300">
+
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="https://Wa.me/+2349031360947"
+                    class="w-12 h-12 flex items-center justify-center rounded-full 
+                    bg-white/10 border border-white/20 text-white text-xl
+                    backdrop-blur-md shadow-lg
+                    hover:bg-green-400 hover:scale-110
+                    transition duration-300">
+
+                    <i class="fa fa-whatsapp"></i>
+                </a>
+                <a href=""
+                    class="w-12 h-12 flex items-center justify-center rounded-full 
+                    bg-white/10 border border-white/20 text-white text-xl
+                    backdrop-blur-md shadow-lg
+                    hover:bg-red-500 hover:scale-110
+                    transition duration-300">
+
+                    <i class="fa fa-youtube"></i>
+                </a>
+                <a href=""
+                    class="w-12 h-12 flex items-center justify-center rounded-full 
+                    bg-white/10 border border-white/20 text-white text-xl
+                    backdrop-blur-md shadow-lg
+                    hover:bg-gray-400 hover:scale-110
+                    transition duration-300">
+
+                    <i class="fa fa-github"></i>
+                </a>
+                <a href=""
+                    class="w-12 h-12 flex items-center justify-center rounded-full 
+                    bg-white/10 border border-white/20 text-white text-xl
+                    backdrop-blur-md shadow-lg
+                    hover:bg-blue-400 hover:scale-110
+                    transition duration-300">
+
+                    <i class="fa fa-envelope"></i>
+                </a>
+                <!-- <a href="#"
+                    class="w-12 h-12 flex items-center justify-center rounded-full 
+                    bg-white/10 border border-white/20 text-white text-xl
+                    backdrop-blur-md shadow-lg
+                    hover:bg-blue-400 hover:scale-110
+                    transition duration-300">
+
+                    <i class="fa fa-tiktok"></i>
+                </a> -->
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="relative min-h-screen">
+
+    <img src="{% static 'files/me1.png' %}" alt=""
+        class="absolute inset-0 w-full h-full object-cover sm:object-contain md:object-cover brightness-25"
+    >
+
+    <div class="absolute inset-0 bg-black/70"></div>
+
+    <div class="relative z-10 flex items-center justify-center min-h-screen px-6">
+        <div>
+
+            <div class="p-2">
+                <h1 class="text-2xl md:text-4xl font-black text-white text-center slidetop">
+                    About Stephen Onyekach.
+                </h1>
+            </div>
+
+            <div class="p-2 max-w-3xl mx-auto">
+                <h3 class="text-1xl md:text-2xl font-black text-white py-5 slideleft">
+                    At Stephen Onyekachi, 
+                </h3>
+                <p class="text-white py-2 slidetop">
+                    We specialize in delivering high-quality tech solutions that empower 
+                    individuals and businesses. Our services include, Python excels in areas such as:
+                </p>
+                <p class="text-white py-2 slidetop">
+                    Machine Learning, Data Science & Analysis, Cybersecurity, Web Development, 
+                    App Development, Graphic Designing And many more cutting-edge fields
+                </p>
+                <p class="text-white py-2 slidetop">
+                    As a dedicated Software Engineer with a strong foundation in Python, I bring a versatile skill set and a 
+                    passion for solving real-world problems through technology. My qualifications include
+                </p>
+                <p class="text-white py-2 slidetop">
+                    Bachelor’s Degree in Computer Science,
+                    Certified Python Developer,
+                    Hands-on experience with real-world projects in machine learning, web apps, and data analysis
+                    Strong problem-solving skills and a commitment to continuous learning
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="bg-black p-10">
+
+    <div>
+
+        <div class="p-2">
+            <h1 class="text-2xl md:text-4xl font-black text-white text-center slidetop">
+                Service We Offer?
+            </h1>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-5 px-2 py-5 items-stretch">
+
+            <div class="w-90 items-stretch rounded bg-white/10 border border-white/2 p-5 zoom-in">
+                <div class="flex items-center py-2">
+                    <i class="fa fa-code 
+                        text-white rounded-full 
+                        bg-white/10 border border-white/2 p-5
+                    "></i>
+                    <h3 class="font-black text-white p-2">
+                        Software Development.
+                    </h3>
+                </div>
+                <div class="text-white rounded shadow py-2">
+                    <p>
+                        Custom-built applications tailored to your needs
+                    </p>
+                    <p>
+                        Full-stack web development using modern frameworks
+                    </p>
+                    <p>
+                        Scalable backend systems with Python and Django
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-90 items-stretch rounded bg-white/10 border border-white/2 p-5 zoom-in">
+                <div class="flex items-center py-2">
+                    <i class="fa fa-cubes
+                        text-white rounded-full 
+                        bg-white/10 border border-white/2 p-5
+                    "></i>
+                    <h3 class="font-black text-white p-2">
+                        Data Science & Analytics.
+                    </h3>
+                </div>
+                <div class="text-white rounded shadow py-2">
+                    <p>
+                        Data cleaning, visualization, and interpretation
+                    </p>
+                    <p>
+                        Machine learning model development
+                    </p>
+                    <p>
+                        Business intelligence solutions
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-90 items-stretch rounded bg-white/10 border border-white/2 p-5 zoom-in">
+                <div class="flex items-center py-2">
+                    <i class="fa fa-lock
+                        text-white rounded-full 
+                        bg-white/10 border border-white/2 p-5
+                    "></i>
+                    <h3 class="font-black text-white p-3">
+                        Cybersecurity Solutions.
+                    </h3>
+                </div>
+                <div class="text-white rounded shadow py-2">
+                    <p>
+                        Security audits and vulnerability assessments
+                    </p>
+                    <p>
+                        Implementation of secure coding practices
+                    </p>
+                    <p>
+                        Basic threat detection and prevention strategies
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-90 items-stretch rounded bg-white/10 border border-white/2 p-5 zoom-in">
+                <div class="flex items-center py-2">
+                    <i class="fa fa-globe
+                        text-white rounded-full 
+                        bg-white/10 border border-white/2 p-5
+                    "></i>
+                    <h3 class="font-black text-white p-2">
+                        Web Design & Development.
+                    </h3>
+                </div>
+                <div class="text-white rounded shadow py-2">
+                    <p>
+                        Responsive and user-friendly websites
+                    </p>
+                    <p>
+                        E-commerce platforms and portfolio sites
+                    </p>
+                    <p>
+                        SEO optimization and performance tuning
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-90 items-stretch rounded bg-white/10 border border-white/2 p-5 zoom-in">
+                <div class="flex items-center py-2">
+                    <i class="fa fa-mobile
+                        text-white rounded-full 
+                        bg-white/10 border border-white/2 p-5
+                    "></i>
+                    <h3 class="font-black text-white p-2">
+                        Mobile App Development.
+                    </h3>
+                </div>
+                <div class="text-white rounded shadow py-2">
+                    <p>
+                        Cross-platform apps using Python-based tools
+                    </p>
+                    <p>
+                        UI/UX design for mobile experiences
+                    </p>
+                    <p>
+                        Integration with cloud services and APIs
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-90 items-stretch rounded bg-white/10 border border-white/2 p-5 zoom-in">
+                <div class="flex items-center py-2">
+                    <i class="fa fa-book
+                        text-white rounded-full 
+                        bg-white/10 border border-white/2 p-5
+                    "></i>
+                    <h3 class="font-black text-white p-2">
+                        Tech Consulting & Training.
+                    </h3>
+                </div>
+                <div class="text-white rounded shadow py-2">
+                    <p>
+                        Personalized coding mentorship
+                    </p>
+                    <p>
+                        Python programming workshops
+                    </p>
+                    <p>
+                        Guidance on tech stack selection and project planning
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-90 items-stretch rounded bg-white/10 border border-white/2 p-5 zoom-in">
+                <div class="flex items-center py-2">
+                    <i class="fa fa-table
+                        text-white rounded-full 
+                        bg-white/10 border border-white/2 p-5
+                    "></i>
+                    <h3 class="font-black text-white p-2">
+                        Graphic Designing.
+                    </h3>
+                </div>
+                <div class="text-white rounded shadow py-2">
+                    <p>
+                        Logos and all kind of graphical related projects
+                    </p>
+                    <p>
+                        UI/UX design for mobile experiences
+                    </p>
+                    <p>
+                        Best flayers for your events
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="flex justify-between w-full bg-black pt-10">
+
+    <div class="flex m-5 mt-0 px-2 items-center justify-between bg-white w-full border border-white rounded ">
+        <div class="flex items-center gap-2 p-2">
+            <h3 class="font-black">1,000+</h3>
+            <p>Active Investors</p>
+        </div>
+        <div class="flex items-center gap-2 p-2">
+            <h3 class="font-black">500+</h3>
+            <p>Trusted Partners</p>
+        </div>
+    </div>
+
+</div>
+
+{% include 'extends/gfooter.html' %}
+
+{% endblock %}
+

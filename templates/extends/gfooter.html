@@ -1,0 +1,121 @@
+
+
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+
+<div class="relative min-h-screen">
+
+    <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover"
+    >
+        <source src="{% static 'files/v2.mp4' %}">
+    </video>
+
+    <div class="absolute inset-0 bg-black/70"></div>
+
+    <div class="relative z-10 flex items-center justify-center min-h-screen px-6">
+        <div>
+
+            <div class="p-2">
+                <h1 class="
+                    text-3xl md:text-4xl font-black text-center
+                    bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent slidetop
+                ">
+                    Contact Stephen Onyekachi
+                </h1>
+            </div>
+
+            <div class="p-5">
+                <p class="text-gray-300 mt-4 max-w-2xl mx-auto slidetop">
+                    As a dedicated Software Engineer with a strong foundation in Python, I bring a versatile skill set and a 
+                    passion for solving real-world problems through technology. My qualifications include
+                </p>
+                <p class="text-gray-300 mt-4 max-w-2xl mx-auto slidetop">
+                    Bachelor’s Degree in Computer Science,
+                    Certified Python Developer,
+                    Hands-on experience with real-world projects in machine learning, web apps, and data analysis
+                    Strong problem-solving skills and a commitment to continuous learning
+                </p>
+            </div>
+
+            <div class="p-5 slidetop">
+
+                <div>
+                    <form action="{% url 'mail' %}"
+                        method="post"
+                    >
+
+                        {% csrf_token %}
+
+                        <div class="py-2">
+                            <input type="email" name="mail"
+                                placeholder="Your Email:" required
+                                class="w-full outline-none rounded border border-white text-white p-2"
+                            >
+                        </div>
+                        <div class="py-2">
+                            <input type="text" name="subject"
+                                placeholder="Email Subject:" required
+                                class="w-full outline-none rounded border border-white text-white p-2"
+                            >
+                        </div>
+                        <br>
+                        <div>
+                            <textarea name="note" id="" placeholder="Message:" required
+                                class="w-full outline-none rounded border border-white text-white p-2 h-20"
+                            ></textarea>
+                        </div>
+                        <br>
+                        <div>
+                            <button
+                                type="submit"
+                                class="w-full p-2 bg-white/10 border rounded border-white/20 text-white text-xl backdrop-blur-md"
+                            >
+                                Send Mail
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="flex flex-wrap gap-5 mt-6 items-center justify-center">
+
+                <div class="text-gray-300 text-center slidetop">
+                    <p>
+                        support@stephenonyekachi.com
+                    </p>
+                    <p>
+                        +234 903 1360 947
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="flex flex-wrap gap-5 mt-6 items-center justify-center">
+
+                <div class="text-gray-300 text-center">
+                    <p>
+                        &copy;
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script> 
+                        Stephen Onyekachi. All rights reserved
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+

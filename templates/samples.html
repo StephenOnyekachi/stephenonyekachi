@@ -1,0 +1,140 @@
+
+
+{% extends 'extends/header.html' %}
+{% load static %}
+{% load humanize %}
+
+
+{% block content %}
+
+{% include 'extends/gnav.html' %}
+
+<div class="relative min-h-screen pt-5">
+
+    <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover"
+    >
+        <source src="{% static 'files/v1.mp4' %}">
+    </video>
+
+    <div class="absolute inset-0 bg-black/70"></div>
+
+    <div class="relative z-10 flex items-center justify-center min-h-screen px-6">
+        <div>
+
+            <div class="p-2">
+                <h1 class="
+                    text-4xl md:text-8xl font-black text-center mt-20
+                    bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent
+                ">
+                    Stephen Onyekachi
+                </h1>
+            </div>
+
+            <div class="p-5">
+                <p class="flex text-gray-300 mt-4 text-2xl md:text-4xl justify-center mx-auto">
+                    Full Stack Django Developer & Problem Solver
+                </p>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center p-2">
+                <h1 class="
+                    text-4xl md:text-8xl font-black text-center mt-20 p-2
+                    bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent
+                ">
+                    {{ allsamples.count }}
+                </h1>
+                <h1 class="
+                    text-2xl md:text-6xl font-black text-center mt-20 p-2
+                    bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent
+                ">
+                    {% if allsamples.count == 1 %}
+
+                    Sample
+
+                    {% else %}
+
+                    Samples
+
+                    {% endif %}
+                </h1>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="bg-black p-10">
+
+    <div>
+
+        <div class="p-2">
+            <h1 class="text-2xl md:text-4xl font-black text-white text-center zoom-in">
+                Work Samples.
+            </h1>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-5 px-2 py-5 items-stretch">
+
+            {% if allsamples %}
+
+            {% for sample in allsamples %}
+
+            <div class="w-full items-stretch rounded bg-white/10 border border-white/2 slidetop">
+                <div class="flex items-center p-5">
+                    <i class="fa fa-code 
+                        text-white rounded-full 
+                        bg-white/10 border border-white/2 p-5
+                    "></i>
+                    <h3 class="font-black text-white p-2 capitalize">
+                        {{ sample.name }}.
+                    </h3>
+                </div>
+                <div class="flex flex-wrap">
+                    <div class="w-full md:w-[250px] px-5">
+                        <img 
+                            src="{{ sample.image.url }}" 
+                            alt="image"
+                            class="w-full object-contain bg-white/10 h-40"
+                        >
+                    </div>
+                    <div class="text-white rounded shadow p-5">
+                        <p class="capitalize py-2">
+                            {{ sample.description }}
+                        </p>
+                        <i class="text-gray-300 py-2">
+                            Posted On: {{ sample.date_added }}
+                        </i>
+
+                        <div class="py-5">
+                            <a href="https://{{ sample.link }}/"
+                                class="w-full p-2 bg-white/10 border rounded capitalize
+                                border-white/20 text-white text-xl backdrop-blur-md
+                                hover:bg-gray-400 hover:scale-110 transition duration-300"
+                            >
+                                view demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+            
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</div>
+
+{% include 'extends/gfooter.html' %}
+
+{% endblock %}
+
