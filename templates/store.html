@@ -9,7 +9,7 @@
 
 {% include 'extends/gnav.html' %}
 
-<div class="bg-black p-10 pt-30">
+<div class="bg-black p-2 md:p-10">
 
     <div class="py-5">
 
@@ -19,19 +19,14 @@
             </h1>
         </div>
 
-        <div class="flex flex-wrap justify-center gap-5 px-2 py-5 items-stretch">
+        <div class="flex flex-wrap justify-center gap-2 md:gap-5 md:px-2 py-5 items-stretch">
 
             {% if allitems %}
 
             {% for item in allitems %}
 
             <div class="product-card w-full items-stretch rounded bg-white/10 border border-white/2"
-
-                data-name="{{ item.name }}"
-                data-image="{{ request.build_absolute_uri }} {{ item.image.url }}"
-                data-description="{{ item.description | escapejs }}"
                 data-number="{{ item.number }}"
-
             >
 
                 <div class="flex items-center p-5">

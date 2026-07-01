@@ -10,18 +10,23 @@ document.addEventListener("DOMContentLoaded", () => {
             const card = e.target.closest('.product-card');
 
             // read data from closest card only
-            const name = card.dataset.name;
-            const image = card.dataset.image;
-            const description = card.dataset.description;
+            const name = card.querySelector(".name").innerText.trim();
+            const image = card.querySelector(".item-image").src;
+            const description = card.querySelector(".description").innerText.trim();
             const phone = card.dataset.number;
 
             // build whatsapp message
             const message = `
-                Hello, I am interested in this product:
+                Hello, I'm interested in this product.
 
-                name: ${name}
-                Image: ${image}
-                details: ${description}
+                Product:
+                ${name}
+
+                Specifications:
+                ${description}
+
+                Product Image:
+                ${image}
             `;
 
             // open whatsapp
