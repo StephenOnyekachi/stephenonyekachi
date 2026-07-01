@@ -34,31 +34,4 @@ document.addEventListener("DOMContentLoaded", () => {
             window.open(url, "_blank");
         })
     })
-
-    // // WhatsApp submit
-    // form.addEventListener('submit', (e) => {
-    //     e.preventDefault();
-
-    //     const name = document.querySelector('#name').innerText.trim();
-    //     const image = document.querySelector('#item-image').src;
-    //     const description = document.querySelector('#description').innerHTML;
-    //     const phone = "2349031360947";
-
-    //     const message = `
-    //         Hello, I want to order:
-
-    //         Food: ${name}
-    //         Image: ${image}
-    //         Quantity: ${quantity}
-    //         Total: ₦${price}
-    //         Address: ${address}
-    //     `;
-
-    //     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-
-    //     window.open(url, "_blank");
-    // });
-
-    // // Initial calculation
-    // updatePrice();
 });
