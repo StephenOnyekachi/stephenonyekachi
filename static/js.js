@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // read data from closest card only
             const name = card.querySelector(".name").innerText.trim();
-            const image = card.querySelector(".item-image").src;
+            const image = card.dataset.image;
             const description = card.querySelector(".description").innerText.trim();
             const phone = card.dataset.number;
 

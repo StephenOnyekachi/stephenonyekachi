@@ -27,6 +27,7 @@
 
             <div class="product-card w-full items-stretch rounded bg-white/10 border border-white/2"
                 data-number="{{ item.number }}"
+                data-image="{{ request.scheme }}://{{ request.get_host }}{{ item.image.url }}"
             >
 
                 <div class="flex items-center p-5">
