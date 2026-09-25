@@ -23,6 +23,18 @@ const projects = [
     github: "https://github.com/StephenOnyekachi/My-Comfort",
     live: "https://my-comfort.vercel.app/",
   },
+
+  {
+    id: 3,
+    title: "Southhill Hotel Management System",
+    category: "Hotel Management System",
+    description:
+      "A hotel management system for managing rooms, reservations, guests, check-in/check-out, payments, staff, reports, and settings.",
+    technologies: ["React", "Tailwind CSS", "JavaScript"],
+    number: "03",
+    github: "https://github.com/StephenOnyekachi/Southhill",
+    live: "https://southhill.vercel.app/",
+  },
 ];
 
 export default projects;
