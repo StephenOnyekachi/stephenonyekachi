@@ -35,6 +35,18 @@ const projects = [
     github: "https://github.com/StephenOnyekachi/Southhill",
     live: "https://southhill.vercel.app/",
   },
+
+  {
+    id: 4,
+    title: "Stephen Onyekachi Portfolio",
+    category: "Personal Portfolio",
+    description:
+      "A modern personal portfolio showcasing my skills, services, projects, and contact information with a clean and responsive user experience.",
+    technologies: ["React", "Tailwind CSS", "JavaScript"],
+    number: "04",
+    github: "https://github.com/StephenOnyekachi/stephenonyekachi",
+    live: "https://stephenonyekachi.vercel.app/",
+  },
 ];
 
 export default projects;
